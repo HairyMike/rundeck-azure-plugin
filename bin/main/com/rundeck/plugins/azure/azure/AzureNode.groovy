@@ -38,7 +38,7 @@ class AzureNode {
 
         this.username = vm.osProfile()?.adminUsername()
 
-        this.hostname = vm.primaryNetworkInterface()?.primaryPrivateIP()
+        this.hostname = vm.primaryNetworkInterface.primaryPrivateIP()
 
         if(this.hostname==null){
             //the offline machines doesn't have a IP selected
